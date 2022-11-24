@@ -1,4 +1,4 @@
-package src.test;
+package test;
 
 import A2_Selection.Selection;
 

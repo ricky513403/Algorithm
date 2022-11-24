@@ -1,4 +1,4 @@
-package src.test;
+package test;
 
 import A1_Bubble.Bubble;
 
