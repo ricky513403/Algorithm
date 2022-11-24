@@ -1,4 +1,4 @@
-package src.test;
+package test;
 
 import src.A3_Insertion.Insertion;
 
