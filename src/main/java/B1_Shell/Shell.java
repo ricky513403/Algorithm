@@ -6,7 +6,7 @@ package B1_Shell;
  * @Date: 2022/11/24 下午 05:34
  * @Description: 希爾排序
  */
-public class B1_Shell {
+public class Shell {
 
     public static void sort(Comparable[] a){
         //1.根據陣列a的長度，確定增長量h的初始值:
