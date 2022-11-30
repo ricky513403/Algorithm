@@ -17,7 +17,22 @@ public class B1_Shell {
         //2.進行希爾排序
         while(h>=1){
             //進行排序
-            //1.
+            //2.1.找到待插入的元素
+            for(int i=h;i<a.length;i++){
+                //2.2把待插入的元素插入到有序數列中
+                for(int j=i;j>=h;h-=h){
+
+                    //待插入的元素是a[j],比如a[j]和a[j-h]
+                    if(greater(a[j-h],a[j])) {
+                        //交換元素
+                        exch(a,j-h,j);
+                    }else{
+                        //待插入元素已找到正確位子 結束循環
+                        break;
+                    }
+
+                }
+            }
             
             //減小h的值
             h=h/2;
