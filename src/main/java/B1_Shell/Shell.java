@@ -20,7 +20,7 @@ public class Shell {
             //2.1.找到待插入的元素
             for(int i=h;i<a.length;i++){
                 //2.2把待插入的元素插入到有序數列中
-                for(int j=i;j>=h;h-=h){
+                for(int j=i;j>=h;j-=h){
 
                     //待插入的元素是a[j],比如a[j]和a[j-h]
                     if(greater(a[j-h],a[j])) {
@@ -33,7 +33,6 @@ public class Shell {
 
                 }
             }
-            
             //減小h的值
             h=h/2;
         }
