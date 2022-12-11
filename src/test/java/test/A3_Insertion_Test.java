@@ -1,6 +1,8 @@
 package test;
 
-import src.A3_Insertion.Insertion;
+
+
+import A3_Insertion.Insertion;
 
 import java.util.Arrays;
 

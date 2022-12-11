@@ -1,4 +1,4 @@
-package src.A3_Insertion;
+package A3_Insertion;
 
 /**
  * @FileName: Insertion
