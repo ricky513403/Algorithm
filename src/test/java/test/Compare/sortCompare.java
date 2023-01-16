@@ -3,6 +3,7 @@ package test.Compare;
 
 import A3_Insertion.Insertion;
 import B1_Shell.Shell;
+import B2_Merge.Merge;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -29,8 +30,9 @@ public class sortCompare {
         Integer[] a = new Integer[list.size()];
         list.toArray(a);
         //4.調用測試代碼完成測試
-        testInsertion(a);
-        testShell(a);
+        testInsertion(a);//37499ms
+//        testShell(a);//30ms
+//        testMerge(a);//70ms
     }
     //Shell效率
     public static void testShell(Integer[] a){
@@ -56,5 +58,16 @@ public class sortCompare {
         System.out.println("InsertionSort執行時間為"+(end-start)+"毫秒");
     }
 
+    //Merge效率
+    public static void testMerge(Integer[] a){
+        //1.獲取執行之前的時間
+        long start = System.currentTimeMillis();
+        //2.執行算法代碼
+        Merge.sort(a);
+        //3.獲取執行之後的時間
+        long end = System.currentTimeMillis();
+        //4.算出程序執行的時間並輸出
+        System.out.println("歸併執行"+(end-start)+"毫秒");
+    }
 
 }
