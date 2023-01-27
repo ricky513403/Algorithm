@@ -1,8 +1,7 @@
-package test;
+package test.Sort;
 
-import B2_Merge.Merge;
+import Sort.B2_Merge;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -15,7 +14,7 @@ public class B2_Merg_Test {
 
     public static void main(String[] args) {
         Integer[] a = {8,4,5,7,1,3,6,2};
-        Merge.sort(a);
+        B2_Merge.sort(a);
         System.out.println(Arrays.toString(a));
     }
 }

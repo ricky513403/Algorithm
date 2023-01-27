@@ -1,4 +1,4 @@
-package A1_Bubble;
+package Sort;
 
 /**
  * @FileName: Bubble
@@ -6,7 +6,7 @@ package A1_Bubble;
  * @Date: 2022/11/15 上午 10:43
  * @Description:
  */
-public class Bubble {
+public class A1_Bubble {
     //對陣列a中的元素進行排序
     public static void sort(Comparable[] a){
 

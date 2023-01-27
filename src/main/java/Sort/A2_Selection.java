@@ -1,4 +1,4 @@
-package A2_Selection;
+package Sort;
 
 /**
  * @FileName: Selection
@@ -6,7 +6,7 @@ package A2_Selection;
  * @Date: 2022/11/15 上午 11:04
  * @Description:
  */
-public class Selection {
+public class A2_Selection {
 
     public static void sort(Comparable[] a){
         for(int i=0;i<=a.length-2;i++){

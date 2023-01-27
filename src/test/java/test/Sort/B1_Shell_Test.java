@@ -1,6 +1,6 @@
-package test;
+package test.Sort;
 
-import B1_Shell.Shell;
+import Sort.B1_Shell;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ public class B1_Shell_Test {
     public static void main(String[] args) {
 
         Integer[] a={9,1,2,5,7,4,8,6,3,5};
-        Shell.sort(a);
+        B1_Shell.sort(a);
 
         System.out.println(Arrays.toString(a));
 

@@ -1,8 +1,8 @@
-package test;
+package test.Sort;
 
 
 
-import A3_Insertion.Insertion;
+import Sort.A3_Insertion;
 
 import java.util.Arrays;
 
@@ -17,7 +17,7 @@ public class A3_Insertion_Test {
 
         Integer[] a={4,3,2,10,12,1,5,6};
 
-        Insertion.sort(a);
+        A3_Insertion.sort(a);
 
         System.out.println(Arrays.toString(a));
     }

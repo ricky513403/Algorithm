@@ -1,4 +1,4 @@
-package A3_Insertion;
+package Sort;
 
 /**
  * @FileName: Insertion
@@ -6,7 +6,7 @@ package A3_Insertion;
  * @Date: 2022/11/21 下午 06:05
  * @Description:
  */
-public class Insertion {
+public class A3_Insertion {
 
     public static void sort(Comparable[] a){
         for(int i=0;i<a.length;i++) {

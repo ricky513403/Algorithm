@@ -1,8 +1,7 @@
-package test;
+package test.Sort;
 
-import A1_Bubble.Bubble;
+import Sort.A1_Bubble;
 
-import java.sql.Array;
 import java.util.Arrays;
 
 /**
@@ -16,7 +15,7 @@ public class A1_Bubble_Test {
 
         Integer[] arr={4,5,6,3,2,1,};
 
-        Bubble.sort(arr);
+        A1_Bubble.sort(arr);
 
         System.out.println(Arrays.toString(arr));
     }

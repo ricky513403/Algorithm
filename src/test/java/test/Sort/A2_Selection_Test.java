@@ -1,8 +1,7 @@
-package test;
+package test.Sort;
 
-import A2_Selection.Selection;
+import Sort.A2_Selection;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -16,7 +15,7 @@ public class A2_Selection_Test {
 
         Integer[] a = {4,6,8,7,9,2,10,1};
 
-        Selection.sort(a);
+        A2_Selection.sort(a);
         System.out.println(Arrays.toString(a));
     }
 }

@@ -1,9 +1,9 @@
 package test.Compare;
 
 
-import A3_Insertion.Insertion;
-import B1_Shell.Shell;
-import B2_Merge.Merge;
+import Sort.A3_Insertion;
+import Sort.B1_Shell;
+import Sort.B2_Merge;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -39,7 +39,7 @@ public class sortCompare {
         //1.獲取執行之前的時間
         long start = System.currentTimeMillis();
         //2.執行算法代碼
-        Shell.sort(a);
+        B1_Shell.sort(a);
         //3.獲取執行之後的時間
         long end = System.currentTimeMillis();
         //4.算出程序執行的時間並輸出
@@ -51,7 +51,7 @@ public class sortCompare {
         //1.獲取執行之前的時間
         long start = System.currentTimeMillis();
         //2.執行算法代碼
-        Insertion.sort(a);
+        A3_Insertion.sort(a);
         //3.獲取執行之後的時間
         long end = System.currentTimeMillis();
         //4.算出程序執行的時間並輸出
@@ -63,7 +63,7 @@ public class sortCompare {
         //1.獲取執行之前的時間
         long start = System.currentTimeMillis();
         //2.執行算法代碼
-        Merge.sort(a);
+        B2_Merge.sort(a);
         //3.獲取執行之後的時間
         long end = System.currentTimeMillis();
         //4.算出程序執行的時間並輸出

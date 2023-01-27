@@ -1,6 +1,6 @@
-package B2_Merge;
+package Sort;
 
-public class Merge {
+public class B2_Merge {
     //輔助陣列
     private static Comparable[] assist;
     //比較大小
