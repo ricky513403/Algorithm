@@ -1,4 +1,4 @@
-package Sort;
+package sort;
 
 public class B2_Merge {
     //輔助陣列

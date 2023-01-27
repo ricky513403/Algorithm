@@ -1,9 +1,9 @@
-package test.Compare;
+package test.compare;
 
 
-import Sort.A3_Insertion;
-import Sort.B1_Shell;
-import Sort.B2_Merge;
+import sort.A3_Insertion;
+import sort.B1_Shell;
+import sort.B2_Merge;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

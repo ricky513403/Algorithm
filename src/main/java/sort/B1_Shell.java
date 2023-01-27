@@ -1,4 +1,4 @@
-package Sort;
+package sort;
 
 /**
  * @FileName: B1_Shell

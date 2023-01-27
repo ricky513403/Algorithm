@@ -1,6 +1,6 @@
-package test.Sort;
+package test.sort;
 
-import Sort.B2_Merge;
+import sort.B2_Merge;
 
 import java.util.Arrays;
 

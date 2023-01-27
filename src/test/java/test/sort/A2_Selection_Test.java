@@ -1,6 +1,6 @@
-package test.Sort;
+package test.sort;
 
-import Sort.A2_Selection;
+import sort.A2_Selection;
 
 import java.util.Arrays;
 

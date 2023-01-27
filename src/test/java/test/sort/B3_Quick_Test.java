@@ -1,6 +1,6 @@
-package test.Sort;
+package test.sort;
 
-import Sort.B3_Quick;
+import sort.B3_Quick;
 
 import java.util.Arrays;
 

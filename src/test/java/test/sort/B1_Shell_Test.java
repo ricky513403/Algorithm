@@ -1,6 +1,6 @@
-package test.Sort;
+package test.sort;
 
-import Sort.B1_Shell;
+import sort.B1_Shell;
 
 import java.util.Arrays;
 

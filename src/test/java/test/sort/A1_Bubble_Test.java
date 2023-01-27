@@ -1,6 +1,6 @@
-package test.Sort;
+package test.sort;
 
-import Sort.A1_Bubble;
+import sort.A1_Bubble;
 
 import java.util.Arrays;
 

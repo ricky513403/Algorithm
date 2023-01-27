@@ -1,8 +1,8 @@
-package test.Sort;
+package test.sort;
 
 
 
-import Sort.A3_Insertion;
+import sort.A3_Insertion;
 
 import java.util.Arrays;
 
