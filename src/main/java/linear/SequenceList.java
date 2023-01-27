@@ -41,11 +41,13 @@ public class SequenceList<T> implements Iterable<T> {
     //在i元素處插入元素t
     public void insert(int i ,T t){
         //先把i索引處的元素及其後面的元素依次向後移動一位
-        for(int index = N-1;index>i;index--){
+        for(int index = N;index>i;index--){
             eles[index]=eles[index-1];
         }
         //再把t元素放到i索引處
         eles[i] = t;
+        //元素個數+1
+        N++;
     }
 
     //刪除指定位置i處的元素 並返回該元素
