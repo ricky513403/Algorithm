@@ -8,7 +8,7 @@ public class SequenceListTest {
 
     public static void main(String[] args) {
         //創建順序表物件
-        SequenceList<String> s1 =new SequenceList<>(10);
+        SequenceList<String> s1 =new SequenceList<String>(10);
         //測試插入
         s1.insert("Yao");
         s1.insert("Kobe");

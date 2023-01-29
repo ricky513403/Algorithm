@@ -35,11 +35,17 @@ public class SequenceList<T> implements Iterable<T> {
 
     //向線性表中添加元素t
     public void insert(T t){
+        if(N==eles.length){
+            resize(2* eles.length);
+        }
         eles[N++]=t;
     }
 
     //在i元素處插入元素t
     public void insert(int i ,T t){
+        if(N==eles.length){
+            resize(2* eles.length);
+        }
         //先把i索引處的元素及其後面的元素依次向後移動一位
         for(int index = N;index>i;index--){
             eles[index]=eles[index-1];
@@ -60,6 +66,10 @@ public class SequenceList<T> implements Iterable<T> {
         }
         //元素個數-1
         N--;
+
+        if(N<eles.length/4){
+            resize(eles.length/2);
+        }
         return current;
     }
 
@@ -72,7 +82,17 @@ public class SequenceList<T> implements Iterable<T> {
         }
         return -1;
     }
-
+    //根據參數newSize，重置eles的大小
+    public void resize(int newSize){
+        //定義一個陣列 指向原陣列
+        T[] temp=eles;
+        //創建新陣列
+        eles = (T[])new Object[newSize];
+        //把原陣列的數據複製到新陣列即可
+        for(int i=0;i<N;i++){
+            eles[i] = temp[i];
+        }
+    }
     @Override
     public Iterator<T> iterator() {
         return new SIterator();
