@@ -40,11 +40,25 @@ public class TowWayLinkList<T> {
     }
     //判断线性表是否为空，是返回true，否返回false
     public boolean isEmpty(){
-        return false;
+        return N==0;
     }
     //获取线性表中元素的个数
     public int length(){
-        return 0;
+        return N;
+    }
+    //获取第一个元素
+    public T getFirst(){
+        if(isEmpty()){
+            return null;
+        }
+        return head.next.item;
+    }
+    //获取最后一个元素
+    public T getLast(){
+        if(isEmpty()){
+            return null;
+        }
+        return last.item;
     }
     //读取并返回线性表中的第i个元素的值
     public T get(int i){
@@ -66,12 +80,5 @@ public class TowWayLinkList<T> {
     public int indexOf(T t){
         return 0;
     }
-    //获取第一个元素
-    public T getFirst(){
-        return null;
-    }
-    //获取最后一个元素
-    public T getLast(){
-        return null;
-    }
+
 }
