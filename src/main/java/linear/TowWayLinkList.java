@@ -1,6 +1,8 @@
 package linear;
 
-public class TowWayLinkList<T> {
+import java.util.Iterator;
+
+public class TowWayLinkList<T> implements Iterable<T> {
     //首節點
     private Node head;
     //最後一個節點
@@ -8,6 +10,7 @@ public class TowWayLinkList<T> {
 
     //鏈表的長度
     private int N;
+
 
     //節點類
     private class Node{
@@ -53,32 +56,117 @@ public class TowWayLinkList<T> {
         }
         return head.next.item;
     }
-    //获取最后一个元素
+    //獲取最後的元素
     public T getLast(){
         if(isEmpty()){
             return null;
         }
         return last.item;
     }
-    //读取并返回线性表中的第i个元素的值
-    public T get(int i){
-        return null;
-    }
+
     //往线性表中添加一个元素
     public void insert(T t){
-
+        //如果練表為空
+        if(isEmpty()){
+            //創建新節點
+            Node newNode = new Node(t,head,null);
+            //讓新的節點稱為尾節點
+            last=newNode;
+            //讓頭節點指向尾節點
+            head.next=last;
+        }
+        else {
+            //創建新節點
+            Node oldLast=last;
+            Node newNode=new Node(t,oldLast,null);
+            //讓當前的尾節點指向新節點
+            oldLast.next = newNode;
+            //讓新節點成為尾節點
+            last=newNode;
+        }
+        //元素個數+1
+        N++;
     }
-    //在线性表的第i个元素之前插入一个值为t的数据元素
+
+    //指定位置插入
     public void insert(int i,T t){
+        //找到i位置的前一個節點
+        Node pre = head;
+        for(int index=0;index<=i-1;index++){
+           pre=pre.next;
+        }
+        //找到i位置節點
+        Node curr = pre.next;
+        //創建新節點
+        Node newNode = new Node(t,pre,curr);
+        //讓i位置的前一個節點 的 下一個節點變為新節點
+        pre.next=newNode;
+        //讓i位置的前一個節點 變為新節點
+        curr.pre=newNode;
+        //元素個數+1
+        N++;
+    }
+    //獲取指定位置
+    public T get(int i){
+        Node n=head.next;
+        for(int index=0;index<i;index++){
+            n=n.next;
+        }
+        return n.item;
+    }
 
-    }
-    //删除并返回线性表中第i个数据元素。
-    public T remove(int i){
-        return null;
-    }
     //返回线性表中首次出现的指定的数据元素的位序号，若不存在，则返回-1。
     public int indexOf(T t){
-        return 0;
+        Node n = head;
+        for(int i=0;n.next!=null;i++){
+            n=n.next;
+            if(n.next.equals(t)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    //刪除並返回
+    public T remove(int i){
+        //找到i位置的前一個節點
+        Node pre = head;
+        for(int index=0;index<=i-1;index++){
+            pre=pre.next;
+        }
+        //找到i位置的節點
+        Node curr=pre.next;
+        //找到i位置的下一個節點
+        Node nextNode=curr.next;
+        //讓i位置的前一個節點的下一個節點變為i位置的下一個節點
+        pre.next=nextNode;
+        //讓i位置的下一個節點的上一個節點 變為i位置的前一個節點
+        nextNode.pre=pre;
+        N--;
+        return curr.item;
+    }
+
+
+    @Override
+    public Iterator<T> iterator() {
+        return new TIterator();
+    }
+
+    private class TIterator implements Iterator{
+        private Node n;
+        public TIterator(){
+            this.n=head;
+        }
+        @Override
+        public boolean hasNext() {
+            return n.next!=null;
+        }
+
+        @Override
+        public Object next() {
+            n=n.next;
+            return n.item;
+        }
     }
 
 }

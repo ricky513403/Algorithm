@@ -88,7 +88,7 @@ public class LinkList<T> implements Iterable<T>{
     public T remove (int i){
         //找到i位子的前個節點
         Node pre =head;
-        for(int index = 0;index<=i-1;i++){
+        for(int index = 0;index<=i-1;index++){
             pre=pre.next;
         }
         //找到i位子的節點
@@ -135,5 +135,26 @@ public class LinkList<T> implements Iterable<T>{
             return n.item;
         }
     }
-
+    //用來反轉整個鏈表
+    public void reverse(){
+        //判斷當前鏈表是否為空鏈表 如果是空鏈表則結束運行 如不是則調用重載的reverse的方法完成反轉
+        if(isEmpty()){
+            return;
+        }
+        reverse(head.next);
+    }
+    //反轉指定的節點 並把反轉後的節點返回
+    public Node reverse(Node curr){
+        if(curr.next==null){
+            head.next=curr;
+            return curr;
+        }
+        //遞歸的反轉當前節點curr的下一個節點，返回值就是鏈表反轉後 當前節點的下一個節點
+        Node pre = reverse(curr.next);
+        //讓返回的節點的下一個節點變為當前的curr節點
+        pre.next=curr;
+        //把當前節點的下一個節點變為null
+        curr.next=null;
+        return curr;
+    }
 }
